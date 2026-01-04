@@ -65,5 +65,3 @@ This script uses a saved checkpoint to predict the class of a single image.
 bash
 python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --top_k 5 --gpu
 
-## Explain Combined_Image_Classifier.ipynb
-`Combined_Image_Classifier.ipynb` is just `Image_Classifier_Project.ipynb` but I merged the training cell with the saving checkpoint cell, I also merged the testing cell with the loading checkpoint cell.
