@@ -1,6 +1,14 @@
 # Image Classifier Project
 
-This project is a CLI application that allows users to train a deep learning model on a dataset of images and then use that model to predict the classes of new images. Built with Python and PyTorch.
+## Udacity AI Programming with Python: Image Classifier
+
+This repository contains the code for a command-line image classifier built with **PyTorch**. The application uses transfer learning (VGG16 or ResNet50) to identify different species of flowers.
+
+## 📁 Project Structure
+- `train.py`: Trains a new network on a dataset and saves the model as a checkpoint.
+- `predict.py`: Uses a trained network to predict the class for an input image.
+- `model_utils.py`: Contains functions for loading models and building the classifier.
+- `processing_utils.py`: Handles image preprocessing and scaling.
 
 ## 🚀 Key Features
 - **Transfer Learning:** Uses pre-trained models (VGG16, ResNet50, etc.) to achieve high accuracy with small datasets.
