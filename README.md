@@ -25,6 +25,19 @@ This repository contains the code for a command-line image classifier built with
    
    You should have cuda available on you local computer, otherwise it will likely run very slow and won't work well.I recommend you to install later PyTorch version like `2.9.1+cu128` so cuda is available.
 
+3. **This project requires Python 3.9+ and the following libraries:**
+
+   - PyTorch
+   - Torchvision
+   - NumPy
+   - Pillow
+   - Matplotlib
+   
+   Install all dependencies using:
+   
+   ```bash
+   pip install -r requirements.txt
+
 ## Dataset
 The dataset contains 102 different types of flowers with ~25 each.It is so big that it is almost impossible to run it on CPU.You can download it in `Download_the_Data.ipynb`.
 
