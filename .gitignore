@@ -1,0 +1,6 @@
+# Ignore the dataset folder (usually very large)
+flowers/
+
+# Ignore all model checkpoints
+checkpoints/
+*.pth
