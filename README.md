@@ -4,18 +4,18 @@
 
 This repository contains the code for a command-line image classifier built with **PyTorch**. The application uses transfer learning (VGG16 or ResNet50) to identify different species of flowers.
 
-## 🚀 Key Features
+## Key Features
 - **Transfer Learning:** Uses pre-trained models (VGG16, ResNet50, etc.) to achieve high accuracy with small datasets.
 - **Customizable:** Choose your architecture, learning rate, and hidden units via CLI arguments.
 - **GPU Support:** Automatically detects and uses CUDA for faster training.
 
-## 📁 Project Structure
+## Project Structure
 - `train.py`: Trains a new network on a dataset and saves the model as a checkpoint.
 - `predict.py`: Uses a trained network to predict the class for an input image.
 - `Image_Classifier_Project.ipynb`: 'train.py' and 'predict.py' into one single file.
 - 'Combined_Image_Classifier.ipynb': Image_Classifier_Project but I combined some cells together.
 
-## 🛠 Installation & Setup
+## Installation & Setup
 1. **Clone the repo:**
    ```bash
    git clone [https://github.com/YannickYeh/Create-Your-Own-Image-Classifier.git](https://github.com/YannickYeh/Create-Your-Own-Image-Classifier.git)
@@ -25,7 +25,7 @@ This repository contains the code for a command-line image classifier built with
    
    You should have cuda available on you local computer, otherwise it will likely run very slow and won't work well.I recommend you to install later PyTorch version like `2.9.1+cu128` so cuda is available.
 
-## 📊 Dataset
+## Dataset
 The dataset contains 102 different types of flowers with ~25 each.It is so big that it is almost impossible to run it on CPU.You can download it in `Download_the_Data.ipynb`.
 
 Or you can follow these 3 steps:
@@ -33,7 +33,7 @@ Or you can follow these 3 steps:
 2. Create a folder named `flowers/` in the project root.
 3. Extract the `train`, `valid`, and `test` folders into it.
 
-## ⚙️ Command Line Arguments
+## Command Line Arguments
 
 The project uses two main scripts: `train.py` for model training and `predict.py` for inference.
 
