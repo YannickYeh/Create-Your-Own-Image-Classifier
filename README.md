@@ -17,3 +17,6 @@ You have to provide the image path and the checkpoint path.
 For example:
 
 ```python predict.py 'flowers/test/1/image_06752.jpg' checkpoint.pth```
+
+# Explain Combined_Image_Classifier.ipynb
+```Combined_Image_Classifier.ipynb``` is just ```Image_Classifier_Project.ipynb``` but I merged the training cell with the saving checkpoint cell, I also merged the testing cell with the loading checkpoint cell.
