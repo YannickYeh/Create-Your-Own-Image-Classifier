@@ -65,9 +65,9 @@ This script allows you to train a new network on a dataset and save the model as
 | `--gpu` | Include this flag to use GPU (CUDA) for training | `False` |
 
 **Example Command:**
-bash
+```bash
 python train.py flowers --arch resnet50 --learning_rate 0.01 --hidden_units 512 --gpu
-
+```
 
 ---
 
@@ -83,6 +83,6 @@ This script uses a saved checkpoint to predict the class of a single image.
 | `--gpu` | Include this flag to use GPU for inference | `False` |
 
 **Example Command:**
-bash
+```bash
 python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --top_k 5 --gpu
-
+```
