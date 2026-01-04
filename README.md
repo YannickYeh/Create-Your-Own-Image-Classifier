@@ -4,16 +4,16 @@
 
 This repository contains the code for a command-line image classifier built with **PyTorch**. The application uses transfer learning (VGG16 or ResNet50) to identify different species of flowers.
 
-## 📁 Project Structure
-- `train.py`: Trains a new network on a dataset and saves the model as a checkpoint.
-- `predict.py`: Uses a trained network to predict the class for an input image.
-- `model_utils.py`: Contains functions for loading models and building the classifier.
-- `processing_utils.py`: Handles image preprocessing and scaling.
-
 ## 🚀 Key Features
 - **Transfer Learning:** Uses pre-trained models (VGG16, ResNet50, etc.) to achieve high accuracy with small datasets.
 - **Customizable:** Choose your architecture, learning rate, and hidden units via CLI arguments.
 - **GPU Support:** Automatically detects and uses CUDA for faster training.
+
+## 📁 Project Structure
+- `train.py`: Trains a new network on a dataset and saves the model as a checkpoint.
+- `predict.py`: Uses a trained network to predict the class for an input image.
+- `Image_Classifier_Project.ipynb`: 'train.py' and 'predict.py' into one single file.
+- 'Combined_Image_Classifier.ipynb': Image_Classifier_Project but I combined some cells together.
 
 ## 🛠 Installation & Setup
 1. **Clone the repo:**
