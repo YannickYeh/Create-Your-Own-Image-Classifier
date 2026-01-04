@@ -17,19 +17,53 @@ This project is a CLI application that allows users to train a deep learning mod
    
    You should have cuda available on you local computer, otherwise it will likely run very slow and won't work well.I recommend you to install later PyTorch version like `2.9.1+cu128` so cuda is available.
 
-## Dataset
+## 📊 Dataset
 The dataset contains 102 different types of flowers with ~25 each.It is so big that it is almost impossible to run it on CPU.You can download it in `Download_the_Data.ipynb`.
 
-## Training
-You will train the flower dataset by running `train.py`.
+Or you can follow these 3 steps:
+1. Download the dataset [from this link](https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz).
+2. Create a folder named `flowers/` in the project root.
+3. Extract the `train`, `valid`, and `test` folders into it.
 
-## Testing
-You can test the trained model by running `predict.py`.
-You have to provide the image path and the checkpoint path.
+## ⚙️ Command Line Arguments
 
-For example:
+The project uses two main scripts: `train.py` for model training and `predict.py` for inference.
 
-```python predict.py 'flowers/test/1/image_06752.jpg' checkpoint.pth```
+### 1. Training (`train.py`)
+This script allows you to train a new network on a dataset and save the model as a checkpoint.
+
+| Argument | Description | Default |
+| :--- | :--- | :--- |
+| `data_dir` | **Required.** Path to the dataset (e.g., `flowers`) | N/A |
+| `--save_dir` | Directory path or filename to save the checkpoint | `checkpoint.pth` |
+| `--arch` | Model architecture (choose `vgg16` or `resnet50`) | `resnet50` |
+| `--learning_rate` | Learning rate for the optimizer | `0.001` |
+| `--hidden_units` | Number of hidden units in the classifier | `150` |
+| `--epochs` | Number of training epochs | `5` |
+| `--batch_size` | Number of images per training batch | `16` |
+| `--gpu` | Include this flag to use GPU (CUDA) for training | `False` |
+
+**Example Command:**
+bash
+python train.py flowers --arch resnet50 --learning_rate 0.01 --hidden_units 512 --gpu
+
+
+---
+
+### 2. Prediction (`predict.py`)
+This script uses a saved checkpoint to predict the class of a single image.
+
+| Argument | Description | Default |
+| :--- | :--- | :--- |
+| `path_to_image` | **Required.** Path to the image file | N/A |
+| `checkpoint` | **Required.** Path to the saved model `.pth` file | N/A |
+| `--top_k` | Return the top K most likely classes | `3` |
+| `--category_names` | Path to a JSON file mapping categories to names | `cat_to_name.json` |
+| `--gpu` | Include this flag to use GPU for inference | `False` |
+
+**Example Command:**
+bash
+python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --top_k 5 --gpu
 
 ## Explain Combined_Image_Classifier.ipynb
-```Combined_Image_Classifier.ipynb``` is just ```Image_Classifier_Project.ipynb``` but I merged the training cell with the saving checkpoint cell, I also merged the testing cell with the loading checkpoint cell.
+`Combined_Image_Classifier.ipynb` is just `Image_Classifier_Project.ipynb` but I merged the training cell with the saving checkpoint cell, I also merged the testing cell with the loading checkpoint cell.
